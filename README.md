@@ -1,4 +1,4 @@
-Bootstrapping for hypothesis testing and computation of confidence interval.
+<b>Bootstrapping for hypothesis testing and computation of confidence interval.</b>
 
 You want to compare two methods and claim that one is better than the other?
 Your metric is more complex than simnply averaging results for each samples?
