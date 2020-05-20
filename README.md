@@ -1,4 +1,4 @@
-<b>Bootstrapping for hypothesis testing and computation of confidence interval.</b>
+<h1>Bootstrapping for hypothesis testing and computation of confidence interval.</h1>
 
 You want to compare two methods and claim that one is better than the other?
 Your metric is more complex than simnply averaging results for each samples?
@@ -11,19 +11,25 @@ Keep in mind: non-overlapping confidence intervals means that there is a signifi
 
 To use this code, you need to:
 
-1.implement your own custom_metric function
-2.change to code to load your data
-3.check that your estimates (CI bounds and p-value) are stable over several runs of the bootstrapping method. If it is not, increase nbr_runs. 
+<ul>
+  <li>Implement your own custom_metric function.</li>
+  <li>Change to code to load your data.</li>
+  <li>Check that your estimates (CI bounds and p-value) are stable over several runs of the bootstrapping method. If it is not, increase nbr_runs.</li>
+</ul>
 
 Enjoy!
 
-I am a researcher in deep learning, medical image analysis and neurology. Check out my work!
-https://scholar.google.com/citations?user=_yNBmx8AAAAJ&hl=fr
-
-Wanna watch some cool videos?
-https://www.zmediacorp.org/
-
-Reference:
+<b>Reference:</b><br/>
 Efron, B. and Tibshirani, R.J., 1994. An introduction to the bootstrap. CRC press.
 
-PS: I am not responsible for the use you make of this code. Always double check your results.
+----------------------------------------------------------------------------------------------------------------------------
+
+I am a researcher in deep learning, medical image analysis and neurology. Check out my work!<br/>
+https://scholar.google.com/citations?user=_yNBmx8AAAAJ&hl=fr
+
+Wanna watch some cool videos?<br/>
+https://www.zmediacorp.org/
+
+
+
+<i>PS: I am not responsible for the use you make of this code. Always double check your results.</a>
