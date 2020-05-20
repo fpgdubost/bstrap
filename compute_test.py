@@ -12,10 +12,9 @@ def custom_metric(data_methodx):
     return metric
 
 
-def boostrapping_CI(data):
+def boostrapping_CI(data,nbr_runs=1000):
     #Confidence Interval Estimation of an ROC Curve: An Application of Generalized Half Normal and Weibull Distributions
-
-    nbr_runs = 1000
+    
     nbr_scans = len(data.index)
     
     list_metric = []
@@ -41,9 +40,8 @@ def boostrapping_CI(data):
     return metric_stats
 
 
-def boostrapping_hypothesisTesting(data_method1,data_method2):
+def boostrapping_hypothesisTesting(data_method1,data_method2,nbr_runs=100000):
     
-    nbr_runs = 100000
     n = len(data_method1.index)
     m = len(data_method2.index)
     total = n+m
@@ -95,7 +93,8 @@ if __name__ == '__main__':
     
     #You need to:
     #1.implement your own custom_metric function
-    #2.load your data
+    #2.change to code to load your data
+    #3.check that your estimates (CI bounds and p-value) are stable over several runs of the bootstrapping method. If it is not, increase nbr_runs. 
 
     #load data
     data_method1 = pd.read_csv("path_data_method1") #CHANGE
