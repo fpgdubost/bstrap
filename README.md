@@ -1,7 +1,8 @@
 Bootstrapping for hypothesis testing and computation of confidence interval.
 
 You want to compare two methods and claim that one is better than the other?
-Bootstrapping is an easy method to compute statistics over your metrics. It has the advantage of being very versatile. 
+Your metric is more complex than simnply averaging results for each samples?
+Bootstrapping is an easy method to compute statistics over your custom metrics. It has the advantage of being very versatile. 
 I have implemented in this repository:
 -bootstrapping for computation of confidence interval
 -bootstrapping for hypothesis testing (claim that one method is better than another for a given metric)
