@@ -105,7 +105,7 @@ if __name__ == '__main__':
     metric_stats_method2 = boostrapping_CI(data_method2)
     
     #compare method 1 and 2
-    pvalue = boostrapping_hypothesisTesting(data_method1,metric_stats_method2) 
+    pvalue = boostrapping_hypothesisTesting(data_method1,data_method2) 
     
 
 
