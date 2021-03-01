@@ -29,9 +29,4 @@ Efron, B. and Tibshirani, R.J., 1994. An introduction to the bootstrap. CRC pres
 I am a researcher in deep learning, medical image analysis and neurology. Check out my work!<br/>
 https://scholar.google.com/citations?user=_yNBmx8AAAAJ&hl=fr
 
-Wanna watch some cool videos?<br/>
-https://www.zmediacorp.org/
-
-
-
 <i>PS: I am not responsible for the use you make of this code. Always double check your results.</a>
