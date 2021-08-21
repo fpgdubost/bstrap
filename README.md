@@ -4,7 +4,7 @@ You are an **amazing machine learning researcher**.
 
 You invented a new **super cool method**.
 
-You are **not sure that is significantly better** than your baseline.
+You are **not sure that it is significantly better** than your baseline.
 
 You don't have 3000 GPUs to rerun your experiment and check it out.
 
@@ -12,7 +12,7 @@ Then, what you want to do is **bootstrap your results**!
 
 The Bootstrap package allows you to compare two methods and claim that one is better than the other.
 
-##Installation
+## Installation
 
 ```bash
 pip install bootstrap
@@ -21,7 +21,7 @@ That's all you need, really.
 
 Maybe tough, you can still read the instructions and check out the examples to make sure you get it right...
 
-##Features
+## Features
 Bootstrapping is a simple method to compute statistics over your custom metrics, using only one run of the method of each sample. It has the advantage of being very versatile, and can be used with any metric really. 
 
 <ul>
@@ -32,7 +32,7 @@ Bootstrapping is a simple method to compute statistics over your custom metrics,
 
 Keep in mind: non-overlapping confidence intervals means that there is a significant statistical difference. Overlapping CI does not mean that there is no significant statistical difference. To verify this further, you will need to compute the bootstrap hypothesis testing and check the p-value.
 
-##Instructions
+## Instructions
 
 You will need to implement your metric and provide the data sample-wise as a single Pandas dataframe for each method. That's about it.
 Your metric is more complex than simply averaging results for each sample? For example, you cannot compute sample-wise, maybe like AUC or mAP? Then just give your predictions and ground truths sample-wise, which also works with Boostrap. 
@@ -48,11 +48,11 @@ To use this code, you need to:
 
 Enjoy!
 
-##Usage
+## Usage
 
-You find example dataframes under src/bstrap/example_dataframes
+You can find example dataframes under src/bstrap/example_dataframes.
 
-####Example 1: Mean metric 
+#### Example 1: Mean metric 
 ```python
 import pandas as pd
 import numpy as np
@@ -81,7 +81,7 @@ print(stats_method1)
 print(stats_method2)
 ```
 
-####EXAMPLE 2: F1 score
+#### Example 2: F1 score
 
 ```python
 import pandas as pd
@@ -120,7 +120,7 @@ print(stats_method1)
 print(stats_method2)
 ```
 
-####Example 3: AUC
+#### Example 3: AUC
 ```python
 import pandas as pd
 from sklearn.metrics import auc, roc_curve
@@ -154,7 +154,7 @@ print(stats_method1)
 print(stats_method2)
 ```
 
-####Example 4: Multiclass: mean Average Precision (mAP)
+#### Example 4: Multiclass: mean Average Precision (mAP)
 
 ```python
 import pandas as pd
