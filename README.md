@@ -22,11 +22,11 @@ That's all you need, really.
 Maybe tough, you can still read the instructions and check out the examples to make sure you get it right...
 
 ## Features
-Bootstrapping is a simple method to compute statistics over your custom metrics, using only one run of the method of each sample. It has the advantage of being very versatile, and can be used with any metric really. 
+Bootstrapping is a simple method to compute statistics over your custom metrics, using only one run of the method for each sample in your evaluation set. It has the advantage of being very versatile, and can be used with any metric really. 
 
 <ul>
   <li>Bootstrapping for computation of confidence interval</li>
-  <li>bootstrapping for hypothesis testing (claim that one method is better than another for a given metric)</li>
+  <li>Bootstrapping for hypothesis testing (claim that one method is better than another for a given metric)</li>
   <li>Supports metrics that can be computed sample-wise and metrics that cannot.</li>
 </ul>
 
