@@ -10,7 +10,7 @@ You don't have 3000 GPUs to rerun your experiment and check it out.
 
 Then, what you want to do is **bootstrap your results**!
 
-The Bootstrap package allows you to compare two methods and claim that one is better than the other.
+The bstrap package allows you to compare two methods and claim that one is better than the other.
 
 ## Installation
 
