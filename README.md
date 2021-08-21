@@ -52,32 +52,40 @@ Enjoy!
 
 ####Example 1: Mean metric 
 ```python
-    # 1. implement metric
-    metric = np.mean
+import pandas as pd
+import numpy as np
+from bstrap import bootstrap, boostrapping_CI
 
-    # 2. load data
-    df = pd.read_csv("example_dataframes/example_dataframe_mean.csv")
+# 1. implement metric
+metric = np.mean
 
-    # 3. reformat data to a single pandas dataframe per method
-    data_method1 = df["loss_method_1"]
-    data_method2 = df["loss_method_2"]
+# 2. load data
+df = pd.read_csv("example_dataframes/example_dataframe_mean.csv")
 
-    # 4. compare method 1 and 2
-    stats_method1, stats_method2, p_value = bootstrap(metric, data_method1, data_method2, nbr_runs=1000)
-    print(stats_method1)
-    print(stats_method2)
-    print(p_value)
+# 3. reformat data to a single pandas dataframe per method
+data_method1 = df["loss_method_1"]
+data_method2 = df["loss_method_2"]
 
-    # compute CI and mean for each method separately
-    stats_method1 = boostrapping_CI(metric, data_method1, nbr_runs=1000)
-    stats_method2 = boostrapping_CI(metric, data_method2, nbr_runs=1000)
-    print(stats_method1)
-    print(stats_method2)
+# 4. compare method 1 and 2
+stats_method1, stats_method2, p_value = bootstrap(metric, data_method1, data_method2, nbr_runs=1000)
+print(stats_method1)
+print(stats_method2)
+print(p_value)
+
+# compute CI and mean for each method separately
+stats_method1 = boostrapping_CI(metric, data_method1, nbr_runs=1000)
+stats_method2 = boostrapping_CI(metric, data_method2, nbr_runs=1000)
+print(stats_method1)
+print(stats_method2)
 ```
 
 ####EXAMPLE 2: F1 score
 
 ```python
+import pandas as pd
+import sys
+from bstrap import bootstrap, boostrapping_CI
+
 # 1. implement metric
 def compute_f1(data):
     val_target = data["gt"].astype('bool')
@@ -112,6 +120,10 @@ print(stats_method2)
 
 ####Example 3: AUC
 ```python
+import pandas as pd
+from sklearn.metrics import auc, roc_curve
+from bstrap import bootstrap, boostrapping_CI
+
 # 1. implement metric
 def compute_auc(data):
     fpr, tpr, thresholds = roc_curve(data["gt"], data["predictions"], pos_label=1)
@@ -143,6 +155,10 @@ print(stats_method2)
 ####Example 4: Multiclass: mean Average Precision (mAP)
 
 ```python
+import pandas as pd
+from sklearn.metrics import roc_curve
+from bstrap import bootstrap, boostrapping_CI
+
 # 1. implement metric
 def compute_mAP(data):
     gt = data[[column for column in data.columns if 'gt' in column]]

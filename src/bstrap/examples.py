@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import sys
 from sklearn.metrics import auc, average_precision_score, roc_curve
-from utils import bootstrap, boostrapping_CI
+from bstrap import bootstrap, boostrapping_CI
 from ipdb import set_trace as bp
 
 #RUN WITH PYTHON 3
