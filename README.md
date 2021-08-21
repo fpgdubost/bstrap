@@ -1,4 +1,4 @@
-<h1>Boostrap: A Python Package for confidence intervals and hypothesis testing using bootstrapping.</h1>
+<h1>Bstrap: A Python Package for confidence intervals and hypothesis testing using bootstrapping.</h1>
 
 You are an **amazing machine learning researcher**.
 

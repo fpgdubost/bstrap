@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: bstrap
-Version: 0.0.3
+Version: 0.0.5
 Summary: A package to perform hypothesis testing and compute confidence intervals using bootstrapping.
 Home-page: https://github.com/fpgdubost/Bootstrap-hypothesis-testing
 Author: Florian Dubost
@@ -15,7 +15,7 @@ Requires-Python: >=3.6
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-<h1>Boostrap: A Python Package for confidence intervals and hypothesis testing using bootstrapping.</h1>
+<h1>Bstrap: A Python Package for confidence intervals and hypothesis testing using bootstrapping.</h1>
 
 You are an **amazing machine learning researcher**.
 
@@ -66,6 +66,8 @@ To use this code, you need to:
 Enjoy!
 
 ##Usage
+
+You find example dataframes under src/bstrap/example_dataframes
 
 ####Example 1: Mean metric 
 ```python
