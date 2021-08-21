@@ -50,6 +50,8 @@ Enjoy!
 
 ##Usage
 
+You find example dataframes under src/bstrap/example_dataframes
+
 ####Example 1: Mean metric 
 ```python
 import pandas as pd

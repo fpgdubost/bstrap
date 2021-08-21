@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: bstrap
-Version: 0.0.1
+Version: 0.0.3
 Summary: A package to perform hypothesis testing and compute confidence intervals using bootstrapping.
 Home-page: https://github.com/fpgdubost/Bootstrap-hypothesis-testing
 Author: Florian Dubost
