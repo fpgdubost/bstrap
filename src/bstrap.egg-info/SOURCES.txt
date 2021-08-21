@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/bstrap/__init__.py
+src/bstrap/examples.py
+src/bstrap.egg-info/PKG-INFO
+src/bstrap.egg-info/SOURCES.txt
+src/bstrap.egg-info/dependency_links.txt
+src/bstrap.egg-info/top_level.txt
