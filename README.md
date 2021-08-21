@@ -15,7 +15,7 @@ The Bootstrap package allows you to compare two methods and claim that one is be
 ## Installation
 
 ```bash
-pip install bootstrap
+pip install bstrap
 ```
 That's all you need, really.
 
