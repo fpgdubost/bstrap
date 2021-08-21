@@ -30,7 +30,7 @@ Bootstrapping is a simple method to compute statistics over your custom metrics,
   <li>Supports metrics that can be computed sample-wise and metrics that cannot.</li>
 </ul>
 
-Keep in mind: non-overlapping confidence intervals means that there is a significant statistical difference. Overlapping CI does not mean that there is no significant statistical difference. To verify this further, you will need to compute the bootstrap hypothesis testing and check the p-value.
+Keep in mind: non-overlapping confidence intervals means that there is a significant statistical difference. Overlapping confidence intervals does not mean that there is no significant statistical difference. To verify this further, you will need to compute the bootstrap hypothesis testing and check the p-value.
 
 ## Instructions
 
@@ -43,7 +43,7 @@ To use this code, you need to:
   <li>Implement your own metric: should take the one pandas dataframe of data as input and return a scalar value.</li>
   <li>Load your data.</li>
   <li>Reformat data to a single pandas dataframe per method with standardized column names, and one sample per row.</li>
-  <li>Check that your estimates (CI bounds and p-value) are stable over several runs of the bootstrapping method. If the estimates are not stable, increase nbr_runs</li>
+  <li>Check that your estimates (confidence interval and p-value) are stable over several runs of the bootstrapping method. If the estimates are not stable, increase nbr_runs</li>
 </ol>
 
 Enjoy!
