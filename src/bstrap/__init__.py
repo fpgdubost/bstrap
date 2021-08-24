@@ -6,9 +6,10 @@ import numpy as np
 #Efron, B. and Tibshirani, R.J., 1994. An introduction to the bootstrap. CRC press.
 #Bootstrap hypothesis testing
 
-def boostrapping_CI(metric, data ,nbr_runs=1000):
+def boostrapping_CI(metric, data ,nbr_runs=1000, verbose=False):
 
-    print("Computing bootstrap confidence intervals...")
+    if verbose:
+        print("Computing bootstrap confidence intervals...")
 
     nbr_scans = len(data.index)
     list_results = []
@@ -30,30 +31,36 @@ def boostrapping_CI(metric, data ,nbr_runs=1000):
     metric_stats['metric_ci_lb'] = np.percentile(list_results, 5)
     metric_stats['metric_ci_ub'] = np.percentile(list_results, 95)
 
-    print("Bootstrap confidence intervals computed.")
+    if verbose:
+        print("Bootstrap confidence intervals computed.")
 
     return metric_stats
 
 
-def bootstrap(metric, data_method1, data_method2, nbr_runs=100000, compute_bounds=True):
+def bootstrap(metric, data_method1, data_method2, nbr_runs=100000, compute_bounds=True, verbose=False):
+
+    # reset index
+    data_method1_reindexed = data_method1.reset_index(drop=True)
+    data_method2_reindexed = data_method2.reset_index(drop=True)
 
     # get length of each data
-    n = len(data_method1.index)
-    m = len(data_method2.index)
+    n = len(data_method1_reindexed.index)
+    m = len(data_method2_reindexed.index)
     total = n + m
 
     # compute the metric for both methods
-    result_method1 = metric(data_method1)
-    result_method2 = metric(data_method2)
+    result_method1 = metric(data_method1_reindexed)
+    result_method2 = metric(data_method2_reindexed)
 
     # compute statistic t
     t = abs(result_method1 - result_method2)
 
     # merge data from both methods
-    data = pd.concat([data_method1, data_method2])
+    data = pd.concat([data_method1_reindexed, data_method2_reindexed])
 
     # compute bootstrap statistic
-    print("Computing bootstrap test...")
+    if verbose:
+        print("Computing bootstrap test...")
     nbr_cases_higher = 0
     for r in range(nbr_runs):
         # sample random indexes with replacement
@@ -79,15 +86,16 @@ def bootstrap(metric, data_method1, data_method2, nbr_runs=100000, compute_bound
 
     p_value = nbr_cases_higher * 1. / nbr_runs
 
-    print("Bootstrap test computed.")
+    if verbose:
+        print("Bootstrap test computed.")
 
     if not compute_bounds:
         return p_value
 
     else:
         # compute CI and means
-        stats_method1 = boostrapping_CI(metric, data_method1, nbr_runs)
-        stats_method2 = boostrapping_CI(metric, data_method2, nbr_runs)
+        stats_method1 = boostrapping_CI(metric, data_method1, nbr_runs, verbose)
+        stats_method2 = boostrapping_CI(metric, data_method2, nbr_runs, verbose)
 
         return stats_method1, stats_method2, p_value
 

@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: bstrap
-Version: 0.0.7
+Version: 0.0.9
 Summary: A package to perform hypothesis testing and compute confidence intervals using bootstrapping.
-Home-page: https://github.com/fpgdubost/Bootstrap-hypothesis-testing
+Home-page: https://github.com/fpgdubost/bstrap
 Author: Florian Dubost
 Author-email: floriandubost1@gmail.com
 License: UNKNOWN
-Project-URL: Bug Tracker, https://github.com/fpgdubost/Bootstrap-hypothesis-testing/issues
+Project-URL: Bug Tracker, https://github.com/fpgdubost/bstrap/issues
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3
 Classifier: License :: OSI Approved :: MIT License
